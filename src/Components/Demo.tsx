@@ -17,17 +17,16 @@ const Demo = () => {
 
     useEffect(() => {
 
-        const articleFromLocalStroage = JSON.parse(localStorage.getItem("articles"))
+        const articleFromLocalStorage = JSON.parse(localStorage.getItem("articles") as string)
 
-        if (articleFromLocalStroage) {
-            setAllArticles(articleFromLocalStroage)
+        if (articleFromLocalStorage) {
+            setAllArticles(articleFromLocalStorage)
         }
     }, [])
 
-    const handleSubmit = async (e: Event) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault()
         const { data } = await getSummary({ articleUrl: article.url })
-
 
         if (data?.summary) {
 

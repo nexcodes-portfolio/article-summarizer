@@ -1,6 +1,6 @@
 import './App.css'
 
-import Hero from './components/Hero.tsx'
+import Hero from './Components/Hero.tsx'
 import Demo from './Components/Demo.tsx'
 
 const App = () => {
